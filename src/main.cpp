@@ -73,8 +73,8 @@ int main()
     {
       score += max_value;
       count += 1;
-      str_res.push_back(label_list_[argmax_idx - 1]); 
-      // I replace "label_list_[argmax_idx]" with "label_list_[argmax_idx - 1]" in my version, otherwise the result can't match. 
+      str_res.push_back(label_list_[argmax_idx - 1]);
+      // I replace "label_list_[argmax_idx]" with "label_list_[argmax_idx - 1]" in my version, otherwise the result can't match.
       // I think this is decided by "use_space_char = True/False" in PaddleOCR config file.
     }
     last_index = argmax_idx;

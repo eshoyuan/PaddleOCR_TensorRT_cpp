@@ -241,7 +241,7 @@ int Engine::runInference(const std::vector<cv::Mat> &inputFaceChips, std::vector
         {
             throw std::runtime_error("Error, not all input dimensions specified.");
         }
-        
+
         m_inputBuff.hostBuffer.resize(inputDims);
         m_inputBuff.deviceBuffer.resize(inputDims);
 

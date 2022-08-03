@@ -6,7 +6,8 @@
 #include "buffers.h"
 
 // Options for the network
-struct Options {
+struct Options
+{
     // Use 16 bit floating point type for inference
     bool FP16 = false;
     // Batch sizes to optimize for.
@@ -20,17 +21,19 @@ struct Options {
     // GPU device index
     int deviceIndex = 0;
     // Input dimension CHW
-    std::vector<int> inputDimension = {3,32,320};
+    std::vector<int> inputDimension = {3, 32, 320};
 };
 
 // Class to extend TensorRT logger
-class Logger : public nvinfer1::ILogger {
-    void log (Severity severity, const char* msg) noexcept override;
+class Logger : public nvinfer1::ILogger
+{
+    void log(Severity severity, const char *msg) noexcept override;
 };
 
-class Engine {
+class Engine
+{
 public:
-    Engine(const Options& options);
+    Engine(const Options &options);
     ~Engine();
     // Build the network
     bool build(std::string onnxModelPath);
@@ -39,20 +42,21 @@ public:
     // Preprocess
     cv::Mat preprocessImg(const std::string);
     // Run inference.
-    int runInference(const std::vector<cv::Mat>& inputFaceChips, std::vector<std::vector<float>>& featureVectors);
+    int runInference(const std::vector<cv::Mat> &inputFaceChips, std::vector<std::vector<float>> &featureVectors);
 
     nvinfer1::Dims outputDims;
+
 private:
     // Converts the engine options into a string
-    std::string serializeEngineOptions(const Options& options);
+    std::string serializeEngineOptions(const Options &options);
 
-    void getGPUUUIDs(std::vector<std::string>& gpuUUIDs);
+    void getGPUUUIDs(std::vector<std::string> &gpuUUIDs);
 
-    bool doesFileExist(const std::string& filepath);
+    bool doesFileExist(const std::string &filepath);
 
     std::unique_ptr<nvinfer1::ICudaEngine> m_engine = nullptr;
     std::unique_ptr<nvinfer1::IExecutionContext> m_context = nullptr;
-    const Options& m_options;
+    const Options &m_options;
     Logger m_logger;
     samplesCommon::ManagedBuffer m_inputBuff;
     samplesCommon::ManagedBuffer m_outputBuff;
