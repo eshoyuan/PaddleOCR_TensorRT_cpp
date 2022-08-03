@@ -72,6 +72,7 @@ ch_PP-OCRv2_rec官方训练模型采用PaddleOCR库中tools/infer_rec.py在data/
 ```
 
 - PPOCRv3
+
 本项目使用ch_PP-OCRv3_rec官方推理模型导出为ONNX后在data/word_2.png上的推理结果:
 ```
 yourself        score: 0.9922693371772766

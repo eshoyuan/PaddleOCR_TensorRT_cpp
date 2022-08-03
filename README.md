@@ -77,6 +77,7 @@ The result of ch_PP-OCRv2_rec using tools/infer_rec.py in PaddleOCR on data/word
 ```
 
 - PPOCRv3
+
 The result of ch_PP-OCRv3_rec ONNX model on data/word_2.png:
 
 ```
