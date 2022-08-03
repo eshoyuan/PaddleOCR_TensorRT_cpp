@@ -57,7 +57,7 @@ make
 
 # 结果
 
-- PPOCRv2
+## PPOCRv2
 
 本项目使用ch_PP-OCRv2_rec官方推理模型导出为ONNX后在data/word_2.png上的推理结果:
 
@@ -71,7 +71,7 @@ ch_PP-OCRv2_rec官方训练模型采用PaddleOCR库中tools/infer_rec.py在data/
  "Teacher": {"label": "yourself", "score": 0.9850824475288391}}
 ```
 
-- PPOCRv3
+## PPOCRv3
 
 本项目使用ch_PP-OCRv3_rec官方推理模型导出为ONNX后在data/word_2.png上的推理结果:
 ```
