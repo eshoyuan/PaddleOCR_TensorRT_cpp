@@ -62,7 +62,7 @@ make
 
 # Results
 
-## PPOCRv2
+- PPOCRv2
 
 The result of ch_PP-OCRv2_rec ONNX model on data/word_2.png:
 
@@ -76,7 +76,7 @@ The result of ch_PP-OCRv2_rec using tools/infer_rec.py in PaddleOCR on data/word
  "Teacher": {"label": "yourself", "score": 0.9850824475288391}}
 ```
 
-## PPOCRv3
+- PPOCRv3
 The result of ch_PP-OCRv3_rec ONNX model on data/word_2.png:
 
 ```
