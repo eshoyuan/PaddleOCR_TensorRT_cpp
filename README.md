@@ -37,9 +37,11 @@ set(CUDA_TOOLKIT_ROOT_DIR "/usr/local/cuda")
 set(OpenCV_DIR "/home/opencv-3.4.15")
 ```
 
-- Modify the parameter in main.cpp line 14-21 if needed.
+- Modify the parameter in main.cpp line 14-23 if needed.
 
 ```cpp
+// TODO: Specify your precision here.
+options.FP16 = false;
 // TODO: Specify your input dimension here.
 options.inputDimension = {3,48,320}; // Modify to {3,32,320} when using ppocrv2
 // TODO: Specify your character_dict here.

@@ -11,6 +11,8 @@ inline static size_t argmax(ForwardIterator first, ForwardIterator last)
 int main()
 {
   Options options;
+  // TODO: Specify your precision here.
+  options.FP16 = false;
   // TODO: Specify your input dimension here.
   options.inputDimension = {3,48,320}; // Modify to {3,32,320} when using ppocrv2
   // TODO: Specify your character_dict here.
