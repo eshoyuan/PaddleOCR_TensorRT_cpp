@@ -5,6 +5,7 @@
 虽然PaddleOCR提供了TensorRT部署支持, 但是其代码比较复杂, 比较难解耦. 本项目提供了相对简洁的代码, 展示如何使用TensorRT C++ API和ONNX进行PaddleOCR文字识别算法的部署.
 
 # 环境
+- Ubuntu 18.04
 - CUDA 10.2
 - cuDNN 8.4
 - OpenCV 3.4.15
@@ -32,9 +33,11 @@ set(CUDA_TOOLKIT_ROOT_DIR "/usr/local/cuda")
 set(OpenCV_DIR "/home/opencv-3.4.15")
 ```
 
-- 根据需要在main.cpp中14-21行修改参数.
+- 根据需要在main.cpp中14-23行修改参数.
 
 ```cpp
+// TODO: Specify your precision here.
+options.FP16 = false;
 // TODO: Specify your input dimension here.
 options.inputDimension = {3,48,320}; // Modify to {3,32,320} when using ppocrv2
 // TODO: Specify your character_dict here.

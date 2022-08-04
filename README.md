@@ -6,6 +6,7 @@ English | [简体中文](README_ch.md)
 Though PaddleOCR provides support for TensorRT, it is difficult to decouple. This project provides simple code and demonstrates how to use the TensorRT C++ API and ONNX to deploy PaddleOCR text recognition model.
 
 # Enviroment
+- Ubuntu 18.04
 - CUDA 10.2
 - cuDNN 8.4
 - OpenCV 3.4.15
