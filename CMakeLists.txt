@@ -13,10 +13,6 @@ set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
 
 # TODO: Specify the path to TensorRT root dir
 set(TensorRT_DIR "/usr/yyx/tensorrt/TensorRT/")
-# TODO: Specify the path to cuda root dir
-set(CUDA_TOOLKIT_ROOT_DIR "/usr/local/cuda")
-# TODO: Specify the path to opencv root dir
-set(OpenCV_DIR "/home/opencv-3.4.15")
 
 # We require CUDA, OpenCV, and TensorRT
 find_package(TensorRT REQUIRED)

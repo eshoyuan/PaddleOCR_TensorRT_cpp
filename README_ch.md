@@ -22,15 +22,11 @@
 
 # 运行示例
 
-- 在CMakeLists.txt中14-19行设置自己路径。
+- 在CMakeLists.txt中14-15行设置自己路径。
 
 ```bash
 # TODO: Specify the path to TensorRT root dir
 set(TensorRT_DIR "/usr/yyx/tensorrt/TensorRT/")
-# TODO: Specify the path to cuda root dir
-set(CUDA_TOOLKIT_ROOT_DIR "/usr/local/cuda")
-# TODO: Specify the path to opencv root dir
-set(OpenCV_DIR "/home/opencv-3.4.15")
 ```
 
 - 根据需要在main.cpp中14-23行修改参数.

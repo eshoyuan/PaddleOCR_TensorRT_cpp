@@ -27,15 +27,11 @@ The model used in this tutorial are ch_PP-OCRv2_rec and ch_PP-OCRv3_rec from [Pa
 
 # Usage
 
-- Specify your path in CMakeLists.txt line 14-19.
+- Specify your path in CMakeLists.txt line 14-15.
 
 ```bash
 # TODO: Specify the path to TensorRT root dir
 set(TensorRT_DIR "/usr/yyx/tensorrt/TensorRT/")
-# TODO: Specify the path to cuda root dir
-set(CUDA_TOOLKIT_ROOT_DIR "/usr/local/cuda")
-# TODO: Specify the path to opencv root dir
-set(OpenCV_DIR "/home/opencv-3.4.15")
 ```
 
 - Modify the parameter in main.cpp line 14-23 if needed.
